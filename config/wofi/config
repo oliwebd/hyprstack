@@ -1,0 +1,15 @@
+show=drun
+prompt=Search Apps...
+filter_rate=15
+allow_markup=true
+no_actions=true
+halign=fill
+orientation=vertical
+content_halign=fill
+label_wrap=off
+keys_forward=Tab
+keys_backward=Shift_L-Tab
+hide_scroll=true
+matching=contains
+normal_window=true
+layer=top

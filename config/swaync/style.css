@@ -1,0 +1,49 @@
+@define-color bg #1e1e2e;
+@define-color fg #cdd6f4;
+@define-color border #cba6f7;
+@define-color hover #313244;
+@define-color text #cdd6f4;
+
+.control-center .notification-row .notification-background {
+    background: @bg;
+    color: @fg;
+    border: 1px solid @border;
+    border-radius: 12px;
+    margin: 4px;
+}
+
+.control-center .notification-row .notification-background .notification {
+    padding: 10px;
+}
+
+.control-center .notification-row .notification-background .notification .notification-content {
+    margin: 5px;
+}
+
+.control-center .notification-row .notification-background .notification .notification-content .summary {
+    color: @text;
+    font-weight: bold;
+}
+
+.control-center .notification-row .notification-background .notification .notification-content .body {
+    color: @text;
+}
+
+.control-center {
+    background: @bg;
+    border: 2px solid @border;
+    border-radius: 15px;
+    padding: 10px;
+}
+
+.widget-title {
+    color: @text;
+    font-weight: bold;
+    font-size: 1.5em;
+    margin: 10px;
+}
+
+.widget-dnd {
+    color: @text;
+    margin: 10px;
+}
