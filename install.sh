@@ -18,8 +18,8 @@ echo ">> Enabling RPM Fusion..."
 sudo dnf install -y https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm \
                     https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 
-echo ">> Enabling solopasha/hyprland COPR..."
-sudo dnf copr enable -y solopasha/hyprland
+echo ">> Enabling ashbuk/Hyprland-Fedora COPR (F44 compatible)..."
+sudo dnf copr enable -y ashbuk/Hyprland-Fedora
 
 echo ">> Installing core Hyprland packages and UWSM..."
 sudo dnf install -y hyprland uwsm hyprlock hypridle xdg-desktop-portal-hyprland
