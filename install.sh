@@ -22,20 +22,29 @@ echo ">> Enabling ashbuk/Hyprland-Fedora COPR (F44 compatible)..."
 sudo dnf copr enable -y ashbuk/Hyprland-Fedora
 
 echo ">> Installing core Hyprland packages and UWSM..."
-sudo dnf install -y hyprland uwsm hyprlock hypridle xdg-desktop-portal-hyprland
+sudo dnf install -y --skip-unavailable hyprland uwsm hyprlock hypridle xdg-desktop-portal-hyprland
 
 echo ">> Installing desktop components..."
-sudo dnf install -y waybar wofi kitty swaync swww \
+sudo dnf install -y --skip-unavailable waybar wofi kitty swaync swww \
                     grim slurp swappy wl-clipboard cliphist \
-                    polkit-gnome network-manager-applet pavucontrol \
-                    blueman brightnessctl playerctl jq yazi
+                    hyprpolkitagent network-manager-applet pavucontrol \
+                    blueman brightnessctl playerctl jq
+
+echo ">> Installing yazi file manager..."
+sudo dnf copr enable -y varlad/yazi
+sudo dnf install -y --skip-unavailable yazi
 
 echo ">> Installing fonts and themes..."
-sudo dnf install -y jetbrains-mono-fonts \
+sudo dnf install -y --skip-unavailable jetbrains-mono-fonts \
                     fontawesome-fonts \
                     google-inter-fonts \
-                    papirus-icon-theme \
                     adw-gtk3-theme
+
+echo ">> Installing macOS generic icon theme (WhiteSur)..."
+if [ ! -d "/tmp/WhiteSur-icon-theme" ]; then
+    git clone https://github.com/vinceliuice/WhiteSur-icon-theme.git /tmp/WhiteSur-icon-theme
+fi
+/tmp/WhiteSur-icon-theme/install.sh -a
 
 echo ">> Installation complete."
 echo ">> Running bootstrap.sh to configure dotfiles..."

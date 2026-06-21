@@ -7,7 +7,7 @@ set -euo pipefail
 # Apply Catppuccin theme to GTK 3/4
 gsettings set org.gnome.desktop.interface gtk-theme 'adw-gtk3-dark'
 gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
-gsettings set org.gnome.desktop.interface icon-theme 'Papirus-Dark'
+gsettings set org.gnome.desktop.interface icon-theme 'WhiteSur-dark'
 gsettings set org.gnome.desktop.interface cursor-theme 'Adwaita'
 gsettings set org.gnome.desktop.interface font-name 'Inter 10'
 gsettings set org.gnome.desktop.interface monospace-font-name 'JetBrainsMono Nerd Font 10'
