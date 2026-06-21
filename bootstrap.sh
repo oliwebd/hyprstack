@@ -31,6 +31,9 @@ link_config() {
 mkdir -p "$CONFIG_DIR"
 
 # Link all config components
+link_config "../themes" "themes"
+link_config "../assets" "assets"
+link_config "../scripts" "scripts"
 link_config "hypr" "hypr"
 link_config "waybar" "waybar"
 link_config "wofi" "wofi"

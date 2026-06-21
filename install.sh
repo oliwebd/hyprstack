@@ -28,11 +28,12 @@ echo ">> Installing desktop components..."
 sudo dnf install -y waybar wofi kitty swaync swww \
                     grim slurp swappy wl-clipboard cliphist \
                     polkit-gnome network-manager-applet pavucontrol \
-                    blueman brightnessctl playerctl jq
+                    blueman brightnessctl playerctl jq yazi
 
 echo ">> Installing fonts and themes..."
 sudo dnf install -y jetbrains-mono-fonts \
                     fontawesome-fonts \
+                    google-inter-fonts \
                     papirus-icon-theme \
                     adw-gtk3-theme
 
